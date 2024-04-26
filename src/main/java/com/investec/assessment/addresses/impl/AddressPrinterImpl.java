@@ -39,23 +39,24 @@ public class AddressPrinterImpl implements IAddressPrinter {
 
     @Override
     public void prettyPrintAllAddresses(List<Address> addresses) {
-        System.out.println("Start Executing prettyPrintAllAddresses() method...");
+        System.out.println("Start printing all addresses...");
         for (Address address : addresses) {
             System.out.println(prettyPrintAddress(address));
         }
-        System.out.println("Finished Executing prettyPrintAllAddresses() method...\n");
+        System.out.println("Finished printing all addresses...\n");
 
     }
 
     @Override
     public void printAddressOfType(List<Address> addresses, String type) {
-        System.out.println("Start Executing printAddressesOfType() method...");
+        System.out.println("Start printing address of type...");
         for (Address address : addresses) {
             if (address.getType().getName().equalsIgnoreCase(type)) {
                 System.out.println(prettyPrintAddress(address));
             }
         }
-        System.out.println("Finished Executing printAddressesOfType() method...\n");
+        System.out.println("Finished printing address of type...\n");
     }
+
 
 }
