@@ -1,6 +1,7 @@
 package com.investec.assessment.hcf;
 
 import com.investec.assessment.hcf.exceptions.HighestCommonFactorException;
+import com.investec.assessment.hcf.impl.HighestCommonFactorCalculatorImpl;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -9,13 +10,13 @@ import java.lang.reflect.Method;
 
 import static org.junit.Assert.*;
 
-public class HighestCommonFactorCalculatorTest {
+public class HighestCommonFactorCalculatorImplTest {
 
-    private HighestCommonFactorCalculator calculator;
+    private HighestCommonFactorCalculatorImpl calculator;
 
     @Before
     public void setUp() {
-        calculator = new HighestCommonFactorCalculator();
+        calculator = new HighestCommonFactorCalculatorImpl();
     }
 
     @Test
@@ -47,7 +48,7 @@ public class HighestCommonFactorCalculatorTest {
     @Test
     public void testCalculateGreatestCommonDivisorUsingReflection() throws NoSuchMethodException,
             IllegalAccessException, InvocationTargetException {
-        Method method = HighestCommonFactorCalculator.class.getDeclaredMethod("calculateGreatestCommonDivisor",
+        Method method = HighestCommonFactorCalculatorImpl.class.getDeclaredMethod("calculateGreatestCommonDivisor",
                 int.class, int.class);
         method.setAccessible(true); // Allow access to private method
 

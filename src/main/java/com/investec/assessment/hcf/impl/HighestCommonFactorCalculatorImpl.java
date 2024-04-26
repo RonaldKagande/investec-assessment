@@ -1,10 +1,13 @@
-package com.investec.assessment.hcf;
+package com.investec.assessment.hcf.impl;
 
-import com.investec.assessment.hcf.exceptions.HighestCommonFactorException;
+import com.investec.assessment.hcf.IHighestCommonFactorCalculator;
+import com.investec.assessment.hcf.InputValidator;
 
-public class HighestCommonFactorCalculator{
+public class HighestCommonFactorCalculatorImpl implements IHighestCommonFactorCalculator {
+    @Override
     public int highestCommonFactor(int[] numbers) {
-        validateInput(numbers);
+
+        InputValidator.validateInput(numbers);
 
         int result = numbers[0];
         for (int i = 1; i < numbers.length; i++) {
@@ -22,12 +25,6 @@ public class HighestCommonFactorCalculator{
             a = temp;
         }
         return a;
-    }
-
-    private void validateInput(int[] numbers) {
-        if (numbers == null || numbers.length == 0) {
-            throw new HighestCommonFactorException("Input array is empty or null.");
-        }
     }
 
 }
