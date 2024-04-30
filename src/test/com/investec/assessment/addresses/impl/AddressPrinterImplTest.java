@@ -131,11 +131,11 @@ public class AddressPrinterImplTest {
 
         // Test the printed output
         String printedOutput = outContent.toString();
-        String expectedOutput = "Start Executing prettyPrintAllAddresses() method...\n" +
+        String expectedOutput = "Start printing all addresses...\n" +
                 "Type: Home: 123 Street Apt 101 - City - State/12345 - Country\n" +
                 "Type: Work:  - City - /12345 - Country\n" +
                 "Type: Office:  - City - /12345 - Country\n" +
-                "Finished Executing prettyPrintAllAddresses() method...\n\n";
+                "Finished printing all addresses...\n\n";
         String normalizedExpected = normalizeLineEndings(expectedOutput);
         String normalizedActual = normalizeLineEndings(printedOutput);
         assertEquals(normalizedExpected, normalizedActual);
@@ -158,9 +158,9 @@ public class AddressPrinterImplTest {
 
         // Test the printed output
         String printedOutput = outContent.toString();
-        String expectedOutput = "Start Executing printAddressesOfType() method...\n" +
+        String expectedOutput = "Start printing address of type...\n" +
                 "Type: Home: 123 Street Apt 101 - City - State/12345 - Country\n" +
-                "Finished Executing printAddressesOfType() method...\n\n";
+                "Finished printing address of type...\n\n";
         String normalizedExpected = normalizeLineEndings(expectedOutput);
         String normalizedActual = normalizeLineEndings(printedOutput);
         assertEquals(normalizedExpected, normalizedActual);
